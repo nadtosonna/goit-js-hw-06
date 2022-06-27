@@ -15,6 +15,8 @@ const images = [
 
 const imagesList = document.querySelector('.gallery');
 imagesList.insertAdjacentHTML("beforebegin", "<h2>GALLERY</h2>");
+const galleryHeader = document.querySelector('h2');
+galleryHeader.setAttribute("style", "text-align: center;");
 
 images.forEach(image => {
   imagesList.insertAdjacentHTML('afterbegin',
