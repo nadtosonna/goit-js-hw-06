@@ -1,4 +1,3 @@
-'use strict';
 
 const categoryList = document.querySelectorAll('.item');
 console.log(`Number of categories: ${categoryList.length}`);
