@@ -27,6 +27,7 @@ function createBoxes(elNumberToCreate) {
 
 function destroyBoxes() {
   boxesCollection.innerHTML = '';
+  valueInput.value = '';
 }
 
 function getRandomHexColor() {
