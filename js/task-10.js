@@ -4,14 +4,14 @@ const btnToDestroy = document.querySelector("[data-destroy]");
 const valueInput = document.querySelector("input");
 const boxesCollection = document.querySelector('#boxes');
 
-btnToCreate.addEventListener('click', createBoxes);
+btnToCreate.addEventListener('click', createCollection);
 btnToDestroy.addEventListener('click', destroyBoxes);
 
-function createCollection(elNumberToCreate) {
+function createBoxes(amount) {
   const primaryBoxSise = 30;
   let divCollection = [];
   let div = '';
-  for (let i = 0; i < elNumberToCreate; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     let size = primaryBoxSise + i * 10;
     div = document.createElement('div');
     div.textContent = 'box';
@@ -23,9 +23,9 @@ function createCollection(elNumberToCreate) {
   return divCollection;
 }
 
-function createBoxes() {
+function createCollection() {
   const elNumberToCreate = +valueInput.value;
-  let boxes = createCollection(elNumberToCreate);
+  let boxes = createBoxes(elNumberToCreate);
   boxesCollection.append(...boxes);
 }
 

@@ -4,12 +4,18 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
     event.preventDefault();
-
-    const formDataElements = event.currentTarget.elements;
-  if (formDataElements.email.value === "" || formDataElements.password.value === "") {
+    const {
+    elements: {email, password}
+  } = event.currentTarget;
+  if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
   } else {
-    console.log(`{Login: ${formDataElements.email.value}, Password: ${formDataElements.password.value}}`);
+    let objToDisplay = new FormData(form);
+    objToDisplay.Email = email.value;
+    objToDisplay.Password = password.value;
+  
+    console.log(objToDisplay);
     event.currentTarget.reset();
   }
 }
+
