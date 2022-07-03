@@ -10,7 +10,7 @@ function onFormSubmit(event) {
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
   } else {
-    let objToDisplay = new FormData(form);
+    let objToDisplay = {};
     objToDisplay.Email = email.value;
     objToDisplay.Password = password.value;
   
