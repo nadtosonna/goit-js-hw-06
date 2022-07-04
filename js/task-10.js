@@ -24,8 +24,8 @@ function createBoxes(amount) {
 }
 
 function createCollection() {
-  const elNumberToCreate = +valueInput.value;
-  let boxes = createBoxes(elNumberToCreate);
+  const amount = +valueInput.value;
+  let boxes = createBoxes(amount);
   boxesCollection.append(...boxes);
 }
 
